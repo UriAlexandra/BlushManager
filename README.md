@@ -81,52 +81,62 @@ A rendszer célja, hogy egy esztétikus, áttekinthető és interaktív dashboar
  AJAX + JSON betöltés: motivációs üzenetek listázása (`data/quotes.json`)
 
 
-
- 🧩 Kötelező feladatelemek teljesítése
-
-| Követelmény | Megvalósítva | Fájl |
-|--------------|---------------|------|
-| Legalább 5 HTML oldal | ✅ | index, products, projects, tasks, contact |
-| HTML5 szemantikus elemek | ✅ | minden oldal |
-| Form elemek (text, email, color, radio, checkbox, datalist) | ✅ | contact.html |
-| Videó + JS vezérlés | ✅ | contact.html |
-| AJAX + JSON fájl beolvasás | ✅ | contact.html |
-| jQuery + animáció | ✅ | contact.html |
-| LocalStorage + JavaScript CRUD | ✅ | storage.js, dashboard.js, products.js stb. |
-| Reszponzív design | ✅ | main.css, grid layout |
-| CSS változók, árnyék, radius, hover effektek | ✅ | main.css |
-| Hibakezelés + űrlapvalidálás | ✅ | contact.html, products.js |
-
-
-
  📁 Fájlstruktúra
+ 
 blushmanager/
+
 │
+
 ├── index.html
+
 ├── products.html
+
 ├── projects.html
+
 ├── tasks.html
+
 ├── contact.html
+
 │
+
 ├── styles/
+
 │ ├── main.css
+
 │ ├── dashboard.css
+
 │ ├── products.css
+
 │ ├── projects.css
+
 │ ├── tasks.css
+
 │ └── contact.css
+
 │
+
 ├── js/
+
 │ ├── dashboard.js
+
 │ ├── products.js
+
 │ ├── projects.js
+
 │ ├── tasks.js
+
 │ ├── storage.js
+
 │ └── monthly-stats.js
+
 │
+
 ├── data/
+
 │ └── quotes.json
+
 │
+
 └── README.md
 
 
@@ -150,3 +160,4 @@ Cél: Webfejlesztés vizsgafeladat / beadandó demonstrációs rendszer
 
 
 ✨ A BlushManager célja, hogy egyszerre legyen esztétikus, funkcionális és technikailag teljes – bemutatva a frontend webfejlesztés alapvető ismereteit.
+
