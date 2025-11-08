@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlushManager - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="brand">
+                <i class="fas fa-palette"></i>
+                <h1>BlushManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box-open"></i> Termékek</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projektek</a></li>
+                <li><a href="tasks.html" class="nav-link"><i class="fas fa-tasks"></i> Feladatok</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Kapcsolat</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>Dashboard</h2>
+                <div class="user-info">
+                    <div class="user-avatar">UA</div>
+                    <div>
+                        <div style="font-weight: 600;">Uri Alexandra</div>
+                        <div style="font-size: 14px; color: var(--gray);">Admin</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Dashboard -->
+<div class="dashboard">
+    <div class="stat-card">
+        <i class="fas fa-boxes"></i>
+        <h3>Összes termék</h3>
+        <div class="value" id="totalProducts">0</div>
+        <div class="trend" id="productsTrend">
+            <i class="fas fa-arrow-up"></i> 
+            <span id="productsTrendValue">0%</span> az előző hónaphoz képest
+        </div>
+    </div>
+    <div class="stat-card">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>Aktív rendelések</h3>
+        <div class="value" id="activeOrders">0</div>
+        <div class="trend" id="ordersTrend">
+            <i class="fas fa-arrow-up"></i> 
+            <span id="ordersTrendValue">0%</span> az előző hónaphoz képest
+        </div>
+    </div>
+    <div class="stat-card">
+        <i class="fas fa-tasks"></i>
+        <h3>Aktív projektek</h3>
+        <div class="value" id="activeProjects">0</div>
+        <div class="trend" id="projectsTrend">
+            <i class="fas fa-arrow-up"></i> 
+            <span id="projectsTrendValue">0%</span> az előző hónaphoz képest
+        </div>
+    </div>
+</div>
+
+            <!-- Dashboard Sections -->
+            <div class="dashboard-sections">
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-box-open"></i> Legújabb termékek</h3>
+                    <ul class="dashboard-list" id="dashboardProducts">
+                        <!-- Products will be populated by JavaScript -->
+                    </ul>
+                    <a href="products.html" class="view-all">Összes termék megtekintése</a>
+                </div>
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-project-diagram"></i> Legújabb projektek</h3>
+                    <ul class="dashboard-list" id="dashboardProjects">
+                        <!-- Projects will be populated by JavaScript -->
+                    </ul>
+                    <a href="projects.html" class="view-all">Összes projekt megtekintése</a>
+                </div>
+                <div class="dashboard-section">
+                    <h3><i class="fas fa-tasks"></i> Legújabb feladatok</h3>
+                    <ul class="dashboard-list" id="dashboardTasks">
+                        <!-- Tasks will be populated by JavaScript -->
+                    </ul>
+                    <a href="tasks.html" class="view-all">Összes feladat megtekintése</a>
+                </div>
+            </div>
+
+            <!-- Activity Section -->
+            <div class="activity-container">
+                <h3><i class="fas fa-bell"></i> Legutóbbi tevékenységek</h3>
+                <ul class="activity-list" id="recentActivities">
+                    <!-- Activities will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/monthly-stats.js"></script>
+    <script src="js/dashboard.js"></script>
+    
+</body>
+</html>

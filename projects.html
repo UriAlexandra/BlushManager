@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlushManager - Projektek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="brand">
+                <i class="fas fa-palette"></i>
+                <h1>BlushManager</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box-open"></i> Termékek</a></li>
+                <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projektek</a></li>
+                <li><a href="tasks.html" class="nav-link"><i class="fas fa-tasks"></i> Feladatok</a></li>
+                <li><a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Kapcsolat</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h2>Projektek</h2>
+                <div class="user-info">
+                    <div class="user-avatar">UA</div>
+                    <div>
+                        <div style="font-weight: 600;">Uri Alexandra</div>
+                        <div style="font-size: 14px; color: var(--gray);">Admin</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h3>Aktív projektek</h3>
+                <button class="btn btn-primary" id="newProjectBtn"><i class="fas fa-plus"></i> Új projekt</button>
+            </div>
+
+            <div class="products-grid" id="projectsGrid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Form Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="projectModalTitle">Új projekt hozzáadása</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="projectForm">
+                    <input type="hidden" id="projectId">
+                    <div class="form-group">
+                        <label for="projectName">Projekt neve</label>
+                        <input type="text" id="projectName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription">Leírás</label>
+                        <textarea id="projectDescription" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectStatus">Státusz</label>
+                            <select id="projectStatus" class="form-control" required>
+                                <option value="Aktív">Aktív</option>
+                                <option value="Tervezés">Tervezés</option>
+                                <option value="Befejezett">Befejezett</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDeadline">Határidő</label>
+                            <input type="date" id="projectDeadline" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelProject">Mégse</button>
+                        <button type="submit" class="btn btn-primary">Mentés</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
